@@ -172,9 +172,21 @@ The values the firmware actually drives, verified on hardware:
 | **Wi-Fi (C6, ESP-Hosted SDIO)** | CLK / CMD | GPIO18 / GPIO19 |
 | | D0–D3 | GPIO14 / 15 / 16 / 17 |
 | | C6 reset | GPIO54 |
-| **Battery** | IP5306 charger | 2-pin **MX1.25** connector **CN4** (BAT+/BAT-) |
+| **Battery** | IP5306 charger | 2-pin **MX1.25** connector **CN4** — see polarity below |
 
 SD (SDMMC) and Wi-Fi (C6 SDIO) are **separate buses**, so they coexist.
+
+> ⚠️ **CN4 battery polarity — get this right or you'll reverse-feed the IP5306.** Hold the female MX1.25 plug with its **latch facing up** and the pin holes toward you: the **left pin is − (BAT−, black wire)** and the **right pin is + (BAT+, red wire)**.
+>
+> ```text
+>      ┌────┬────┐   ← latch on top
+>      │  ⊖ │ ⊕  │
+>      └────┴────┘
+>        BAT−  BAT+
+>       (black) (red)
+> ```
+>
+> Standard single-cell 3.7 V Li-ion lead colours: **red = +, black = −**. Double-check your pack's wiring before plugging in — cheap MX1.25 leads are sometimes crimped reversed.
 
 > **Every board pin is defined as an overridable `BOARD_P4_*` macro in [`src/board_p4_pins.h`](src/board_p4_pins.h)** — display, touch, SD (SDMMC), Wi-Fi C6 (SDIO), audio (ES8311 I²S), UART, RS-485, buttons/LED, and the on-chip LDO channels. Override any with `-DBOARD_P4_xxx=<gpio>`. The **schematic sheets** + deep field notes live in the sibling repo — see **[ultramcu/guition-jc4880p443c-i-w](https://github.com/ultramcu/guition-jc4880p443c-i-w)**.
 
