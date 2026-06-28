@@ -18,7 +18,7 @@ The **Guition JC4880P443C_I_W** (module **JC-ESP32P4-M3**) is a 4.3″ touch-dis
 - **4.3″ ST7701S 480×800 IPS MIPI-DSI** panel (2-lane DSI)
 - **GT911** I²C capacitive touch
 - **ES8311** audio codec + NS4150 speaker amp
-- **IP5306** Li-ion charger (single-cell 3.7 V, 2-pin CN4 BAT+/BAT-, ~MX1.25 1.25 mm)
+- **IP5306** Li-ion charger (single-cell 3.7 V, connector **CN4** — a 2-pin **MX1.25** / 1.25 mm-pitch header, BAT+/BAT-)
 - **microSD via SDMMC** (4-bit), dual USB-C, 26-pin 2.54 mm GPIO header, RS-485
 
 A `_Y` variant ships with a plastic case.
@@ -172,7 +172,7 @@ The values the firmware actually drives, verified on hardware:
 | **Wi-Fi (C6, ESP-Hosted SDIO)** | CLK / CMD | GPIO18 / GPIO19 |
 | | D0–D3 | GPIO14 / 15 / 16 / 17 |
 | | C6 reset | GPIO54 |
-| **Battery** | IP5306 charger | 2-pin **CN4** (BAT+/BAT-) |
+| **Battery** | IP5306 charger | 2-pin **MX1.25** connector **CN4** (BAT+/BAT-) |
 
 SD (SDMMC) and Wi-Fi (C6 SDIO) are **separate buses**, so they coexist.
 
