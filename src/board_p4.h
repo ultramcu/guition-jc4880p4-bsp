@@ -44,34 +44,10 @@ extern "C" {
 #define BOARD_P4_LCD_H_RES   480
 #define BOARD_P4_LCD_V_RES   800
 
-/* ---- Pins (defaults; override at build time if the schematic disagrees) ----
- * Values below are the on-hardware VERIFIED set. */
-#ifndef BOARD_P4_LCD_RST          /* panel reset (low 20ms, high 120ms). -1 = none. */
-#define BOARD_P4_LCD_RST     5
-#endif
-#ifndef BOARD_P4_LCD_BL           /* backlight via LEDC PWM (5kHz/8-bit). -1 = skip. */
-#define BOARD_P4_LCD_BL      23
-#endif
-#ifndef BOARD_P4_TOUCH_SDA
-#define BOARD_P4_TOUCH_SDA   7
-#endif
-#ifndef BOARD_P4_TOUCH_SCL
-#define BOARD_P4_TOUCH_SCL   8
-#endif
-#ifndef BOARD_P4_TOUCH_RST        /* GT911 reset. -1 = none. */
-#define BOARD_P4_TOUCH_RST   3
-#endif
-#ifndef BOARD_P4_TOUCH_INT        /* GT911 INT. -1 = poll. */
-#define BOARD_P4_TOUCH_INT   -1
-#endif
-
-/* ---- DSI PHY LDO (P4 internal regulator) ---- */
-#ifndef BOARD_P4_DSI_LDO_CHAN
-#define BOARD_P4_DSI_LDO_CHAN 3
-#endif
-#ifndef BOARD_P4_DSI_LDO_MV
-#define BOARD_P4_DSI_LDO_MV  2500
-#endif
+/* ---- Pins / LDO channels (defaults; override any with -DBOARD_P4_xxx=...) ----
+ * The COMPLETE board GPIO map (display, touch, SD, Wi-Fi C6, audio, UART,
+ * RS-485, buttons) lives in board_p4_pins.h. */
+#include "board_p4_pins.h"
 
 /* ===========================================================================
  * Display

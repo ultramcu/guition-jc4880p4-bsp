@@ -176,7 +176,7 @@ The values the firmware actually drives, verified on hardware:
 
 SD (SDMMC) and Wi-Fi (C6 SDIO) are **separate buses**, so they coexist.
 
-> **The full pinout** (audio, RS-485, expand-IO header, USB, buttons/LED, ADC mic) **and the schematic sheets** live in the sibling repo — see **[ultramcu/guition-jc4880p443c-i-w](https://github.com/ultramcu/guition-jc4880p443c-i-w)**. Not duplicated here.
+> **Every board pin is defined as an overridable `BOARD_P4_*` macro in [`src/board_p4_pins.h`](src/board_p4_pins.h)** — display, touch, SD (SDMMC), Wi-Fi C6 (SDIO), audio (ES8311 I²S), UART, RS-485, buttons/LED, and the on-chip LDO channels. Override any with `-DBOARD_P4_xxx=<gpio>`. The **schematic sheets** + deep field notes live in the sibling repo — see **[ultramcu/guition-jc4880p443c-i-w](https://github.com/ultramcu/guition-jc4880p443c-i-w)**.
 
 ---
 
