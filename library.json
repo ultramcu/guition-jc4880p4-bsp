@@ -1,0 +1,30 @@
+{
+  "name": "guition-jc4880p4-bsp",
+  "version": "0.1.0",
+  "description": "Board support for the Guition JC4880P443C_I_W (ESP32-P4): ST7701S 480x800 MIPI-DSI panel (manual bring-up, no esp_lcd_st7701 vendor component) + GT911 I2C touch. Double-buffered framebuffer + PPA hardware-rotate present API.",
+  "keywords": "esp32-p4, esp32p4, st7701, mipi-dsi, gt911, guition, jc4880p443, bsp, lcd, touch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ultramcu/guition-jc4880p4-bsp.git"
+  },
+  "authors": [
+    {
+      "name": "ultramcu",
+      "url": "https://github.com/ultramcu"
+    }
+  ],
+  "license": "MIT",
+  "frameworks": ["arduino", "espidf"],
+  "platforms": ["espressif32"],
+  "headers": ["board_p4.h"],
+  "dependencies": {
+    "esp_lcd_touch_gt911": "*"
+  },
+  "examples": [
+    "examples/*/*.ino",
+    "examples/*/src/*"
+  ],
+  "build": {
+    "srcFilter": ["+<*.c>"]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "build": {
+    "core": "esp32",
+    "extra_flags": [
+      "-DBOARD_HAS_PSRAM",
+      "-DARDUINO_JC4880P4"
+    ],
+    "f_cpu": "400000000L",
+    "f_flash": "80000000L",
+    "f_psram": "200000000L",
+    "flash_mode": "qio",
+    "psram_type": "qspi",
+    "mcu": "esp32p4",
+    "chip_variant": "esp32p4_es",
+    "variant": "esp32p4"
+  },
+  "connectivity": [
+    "wifi",
+    "bluetooth"
+  ],
+  "debug": {
+    "openocd_target": "esp32p4.cfg"
+  },
+  "frameworks": [
+    "arduino"
+  ],
+  "name": "Guition JC4880P443C_I_W (JC-ESP32P4-M3, ESP32-P4 rev3 + C6 WiFi)",
+  "upload": {
+    "flash_size": "16MB",
+    "maximum_ram_size": 327680,
+    "maximum_size": 16777216,
+    "require_upload_port": true,
+    "speed": 460800
+  },
+  "url": "https://docs.espressif.com",
+  "vendor": "Guition"
+}

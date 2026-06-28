@@ -1,0 +1,41 @@
+#######################################
+# Syntax Coloring Map for guition-jc4880p4-bsp
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+board_p4_display_init	KEYWORD2
+board_p4_get_panel_handle	KEYWORD2
+board_p4_get_framebuffer	KEYWORD2
+board_p4_front_fb	KEYWORD2
+board_p4_flush_region	KEYWORD2
+board_p4_present	KEYWORD2
+board_p4_present_rotated	KEYWORD2
+board_p4_draw_bitmap	KEYWORD2
+board_p4_backlight	KEYWORD2
+board_p4_set_brightness	KEYWORD2
+board_p4_touch_init	KEYWORD2
+board_p4_get_touch_handle	KEYWORD2
+board_p4_touch_read	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+BOARD_P4_LCD_H_RES	LITERAL1
+BOARD_P4_LCD_V_RES	LITERAL1
+BOARD_P4_LCD_RST	LITERAL1
+BOARD_P4_LCD_BL	LITERAL1
+BOARD_P4_TOUCH_SDA	LITERAL1
+BOARD_P4_TOUCH_SCL	LITERAL1
+BOARD_P4_TOUCH_RST	LITERAL1
+BOARD_P4_TOUCH_INT	LITERAL1
+BOARD_P4_DSI_LDO_CHAN	LITERAL1
+BOARD_P4_DSI_LDO_MV	LITERAL1
